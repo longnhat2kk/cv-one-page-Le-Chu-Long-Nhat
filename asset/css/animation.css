@@ -1,0 +1,97 @@
+@keyframes textclip {
+  to {
+    background-position: -200% center;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: fit-content;
+  }
+}
+
+@keyframes blinking-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translate(-50%, 0); /* Không di chuyển */
+  }
+  40% {
+    transform: translate(-50%, -20px); /* Nhảy lên */
+  }
+  60% {
+    transform: translate(-50%, -10px); /* Nhảy xuống */
+  }
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* rung lắc */
+.rung {
+  animation: rung-lac 2s ease infinite;
+}
+
+@-webkit-keyframes rung-lac {
+  0% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+  10% {
+    -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  50% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+
+@keyframes icon-hover-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(10px);
+    opacity: 0.7;
+  }
+  60% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(10px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

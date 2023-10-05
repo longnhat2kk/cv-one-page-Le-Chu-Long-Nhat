@@ -1,0 +1,79 @@
+:root {
+  --background-color-one: #d2e0fb;
+  --background-color-two: #f9f3cc;
+  --background-color-three: #d7e5ca;
+  --background-color-four: #8eaccd;
+  --background-color-five: #78d6c6;
+  --background-color-six: #b0d9b1;
+
+  --background-color-black: #00000083;
+  --background-color-white: #ffffff;
+  --background-color-modal: #f1efef;
+
+  --background-color-white-opcity: #ffffff8e;
+  --background-color-black-opcity: #0000008e;
+
+  --background-color-header-night: #00000083;
+  --background-color-header-light: #ffffffbd;
+
+  --color-text-content-black: #040d12;
+  --color-text-content-dark-black: #61677a;
+  --color-text-content-white: #ffffff;
+  --color-title-orange: #e25e3e;
+
+  --color-boder-orange: #e25e3e;
+  --color-boder-orange-opcity: #e25f3e93;
+
+  --chieu-cao-cua-header: 80px;
+  --chieu-cao-cua-slick-project: 400px;
+}
+
+/* Dakr mode */
+#body__home.dark-mode .header__menu {
+  background-color: var(--background-color-header-night);
+}
+#body__home.dark-mode .header__menu .header__nav--social--network li i,
+#body__home.dark-mode .header__menu .header__nav--menu li a {
+  color: var(--color-text-content-white);
+  transition: all 0.3s ease;
+}
+#body__home.dark-mode section {
+  background-color: #000000d2;
+  position: relative;
+  color: white;
+}
+#body__home.dark-mode section li {
+  color: white;
+}
+#body__home.dark-mode section li a {
+  color: white;
+}
+#body__home.dark-mode section li a:hover {
+  color: var(--color-title-orange);
+}
+#body__home.dark-mode .footer__home {
+  background-color: var(--background-color-header-night);
+}
+#body__home.dark-mode .footer__home {
+  color: white;
+}
+#body__home.dark-mode section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background-color: #040d12;
+  z-index: -1;
+}
+#body__home.dark-mode .slider__work .slick-list .slick-track .slick-slide {
+  background-color: #bdbdbd23;
+}
+#body__home.dark-mode .slider__work .slick-list .slide__heading,
+#body__home.dark-mode .slider__work .slick-list .slide__content,
+#body__home.dark-mode .slider__work .slick-list .slide__content li {
+  color: var(--color-text-content-white);
+}
+/*End Dakr mode */
