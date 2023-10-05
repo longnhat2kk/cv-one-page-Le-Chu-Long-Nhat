@@ -422,4 +422,9 @@
   .maxim p {
     font-size: 0.8rem;
   }
+  .modal__email .form__email {
+    z-index: 12;
+    min-width: 330px;
+    height: 540px;
+  }
 }
