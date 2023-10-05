@@ -27,7 +27,9 @@
   --chieu-cao-cua-header: 80px;
   --chieu-cao-cua-slick-project: 400px;
 }
-
+body {
+  overflow: hidden;
+}
 * {
   /* cursor: default; */
   caret-color: transparent;

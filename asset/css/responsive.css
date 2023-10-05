@@ -118,6 +118,15 @@
 
 /* Mobile - Tablet */
 @media (max-width: 1023px) {
+  #body__home.dark-mode .menu__mobile {
+    background-color: var(--background-color-header-night);
+  }
+  #body__home.dark-mode .menu__mobile .bar path {
+    stroke: var(--color-text-white);
+  }
+  #body__home.dark-mode .menu__mobile h1 a {
+    color: var(--color-text-white);
+  }
   .menu__mobile {
     display: block;
   }
@@ -158,6 +167,7 @@
   .menu__mobile svg {
     padding: 10px;
     display: inline-block;
+    cursor: pointer;
     float: right;
   }
   .menu__mobile g {

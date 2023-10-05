@@ -390,6 +390,20 @@ $(".header__menu .header__nav::after").click(function (e) {
   $(".header__menu").removeClass("active");
   $(".header__nav").removeClass("show");
 });
+
+$(".header__menu .header__nav--menu li a").click(function (e) {
+  e.preventDefault();
+  $(".header__menu").removeClass("active");
+  $(".header__nav").removeClass("show");
+  $(".menu__mobile svg").removeClass("active");
+});
+$(".menu__mobile h1 a").click(function (e) {
+  e.preventDefault();
+  $(".header__menu").removeClass("active");
+  $(".header__nav").removeClass("show");
+  $(".menu__mobile svg").removeClass("active");
+});
+
 //text animation hiệu ứng viết chữ
 const textArray = [
   "Hello esteemed employers, welcome to my introductory website.",
