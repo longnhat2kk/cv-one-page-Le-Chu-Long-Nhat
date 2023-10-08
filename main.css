@@ -27,9 +27,6 @@
   --chieu-cao-cua-header: 80px;
   --chieu-cao-cua-slick-project: 400px;
 }
-body {
-  overflow: hidden;
-}
 * {
   /* cursor: default; */
   caret-color: transparent;
@@ -559,6 +556,9 @@ a {
   text-transform: uppercase;
   text-align: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   font-weight: 500;
   font-size: 1rem;
@@ -574,13 +574,15 @@ a {
   background: transparent;
   z-index: 10;
 }
+.modal__email .btn__submit--send i {
+  margin-left: 6px;
+}
 .modal__email .btn__submit--send:hover {
   border: 1px solid var(--color-boder-orange);
   color: var(--color-text-content-white);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transform: translate(-5px, 5px);
 }
-
 .modal__email .btn__submit--send::before {
   content: "";
   width: 0%;
@@ -651,7 +653,9 @@ a {
 .header__menu .header__avt {
   position: relative;
   min-width: 70px;
+  min-height: 70px;
   height: 70px;
+  width: 70px;
   border-radius: 100%;
   border: 1px solid var(--color-boder-orange);
   overflow: hidden;
@@ -881,12 +885,14 @@ a {
   transform: translateX(-50%);
   width: 40px;
   height: 60px;
+  z-index: 9;
 }
 .box_benner .arrow {
   animation: bounce 1s ease infinite;
   position: absolute;
   left: 50%;
   top: 85%;
+  z-index: 9;
 }
 .box_benner .arrow i {
   font-size: 3rem;
@@ -1602,6 +1608,7 @@ a {
   transform: translateY(200px);
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  overflow: hidden;
 }
 .footer__home .last__word {
   font-size: 0.8rem;

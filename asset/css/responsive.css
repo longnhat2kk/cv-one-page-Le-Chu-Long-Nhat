@@ -132,9 +132,11 @@
   }
   .header__menu {
     height: var(--height-menu-mobile) !important;
+    transition: all 0.3s ease;
   }
   .header__menu.active {
     height: var(--height-header-menu-mobile) !important;
+    backdrop-filter: blur(10px);
   }
   .menu__mobile {
     width: 100%;
@@ -146,6 +148,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--background-color-header-light);
+    backdrop-filter: blur(10px);
   }
   .menu__mobile h1 {
     margin: 0;
@@ -159,16 +162,12 @@
     color: var(--color-text-black);
     text-decoration: none;
   }
-  .menu__mobile * {
-    user-select: none;
-    width: fit-content;
-    height: 100%;
-  }
   .menu__mobile svg {
     padding: 10px;
-    display: inline-block;
+    width: 60px;
+    height: 60px;
+    display: block;
     cursor: pointer;
-    float: right;
   }
   .menu__mobile g {
     transform-origin: 50% 50%;
@@ -257,6 +256,7 @@
     transform: translateY(0);
     opacity: 1;
     visibility: visible !important;
+    z-index: 99;
   }
   .header__menu .header__nav {
     flex-direction: column;
@@ -271,13 +271,21 @@
     margin: 1rem 0;
   }
   .header__menu .header__nav--menu li {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
+  }
+  .header__menu .header__nav--social--network li i {
+    line-height: 0;
+  }
+  .header__menu .header__nav--menu li::after {
+    bottom: 3px;
   }
   .box_benner #typing-container {
     width: 90vw;
   }
+  .box_benner--subtitle,
+  .box_benner #typing-container,
   .box_benner #typing-text {
-    white-space: wrap;
+    white-space: wrap !important;
     font-size: 1.75rem;
     border: none;
   }
@@ -334,6 +342,10 @@
   .modal__email .btn__open--email {
     width: 40px;
     height: 40px;
+  }
+  .zalo__box .icon-zalo {
+    height: 30px;
+    width: 30px;
   }
   .fb__message i,
   .phone__number i,
