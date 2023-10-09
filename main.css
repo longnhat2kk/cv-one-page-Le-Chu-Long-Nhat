@@ -1620,3 +1620,56 @@ a {
   display: block;
   transform: translateY(0);
 }
+
+/* Thông báo  */
+.notification__appears {
+  position: fixed;
+  padding: 1rem;
+  border-radius: 6px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--background-color-header-light);
+  backdrop-filter: blur(5px);
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+.notification__appears--bg {
+  background-color: var(--background-color-black-opcity);
+  cursor: pointer;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99998;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+.notification__appears .notification__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.notification__appears .notification__heading i {
+  font-size: 2rem;
+  color: var(--color-title-orange);
+}
+.notification__appears .icon-close__notification {
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.notification__appears .icon-close__notification:hover {
+  opacity: 0.7;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translate(4px, -4px);
+}
+.notification__appears.active,
+.notification__appears--bg.active {
+  opacity: 1;
+  visibility: visible;
+}

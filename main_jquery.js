@@ -242,6 +242,55 @@ $(document).ready(function () {
     $(".education__contol").removeClass("active");
   });
 
+  // menu mobile
+  $(document).on("click", ".menu__mobile .toggle", function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+    } else {
+      $(this).addClass("active");
+    }
+  });
+  $(".menu__mobile .toggle").click(function (e) {
+    e.preventDefault();
+    $(".header__nav").toggleClass("show");
+    $(".header__menu").toggleClass("active");
+  });
+  $(".header__menu .header__nav::after").click(function (e) {
+    e.preventDefault();
+    $(".header__menu").removeClass("active");
+    $(".header__nav").removeClass("show");
+  });
+
+  $(".header__menu .header__nav--menu li a").click(function (e) {
+    $(".header__menu").removeClass("active");
+    $(".header__nav").removeClass("show");
+    $(".menu__mobile svg").removeClass("active");
+  });
+  $(".menu__mobile h1 a").click(function (e) {
+    $(".header__menu").removeClass("active");
+    $(".header__nav").removeClass("show");
+    $(".menu__mobile svg").removeClass("active");
+  });
+
+  // thông báo
+  function toggleNotificationActive() {
+    $(".notification__appears--bg, .notification__appears").toggleClass(
+      "active"
+    );
+  }
+
+  // Thông báo
+  setTimeout(toggleNotificationActive, 3000);
+
+  $(".icon-close__notification").click(function (e) {
+    toggleNotificationActive();
+  });
+
+  $(".notification__appears--bg").click(function (e) {
+    $(".notification__appears--bg").removeClass("active");
+    $(".notification__appears").removeClass("active");
+  });
+
   // slick slider
   $(".slider__work").slick({
     dots: true,
@@ -371,36 +420,6 @@ function Shadows(amount) {
 for (let i = 1; i <= 3; i++) {
   document.documentElement.style.setProperty("--shadows" + i, Shadows(100));
 }
-
-// menu mobile
-$(document).on("click", ".menu__mobile .toggle", function () {
-  if ($(this).hasClass("active")) {
-    $(this).removeClass("active");
-  } else {
-    $(this).addClass("active");
-  }
-});
-$(".menu__mobile .toggle").click(function (e) {
-  e.preventDefault();
-  $(".header__nav").toggleClass("show");
-  $(".header__menu").toggleClass("active");
-});
-$(".header__menu .header__nav::after").click(function (e) {
-  e.preventDefault();
-  $(".header__menu").removeClass("active");
-  $(".header__nav").removeClass("show");
-});
-
-$(".header__menu .header__nav--menu li a").click(function (e) {
-  $(".header__menu").removeClass("active");
-  $(".header__nav").removeClass("show");
-  $(".menu__mobile svg").removeClass("active");
-});
-$(".menu__mobile h1 a").click(function (e) {
-  $(".header__menu").removeClass("active");
-  $(".header__nav").removeClass("show");
-  $(".menu__mobile svg").removeClass("active");
-});
 
 //text animation hiệu ứng viết chữ
 const textArray = [

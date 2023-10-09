@@ -449,4 +449,7 @@
     min-width: 330px;
     height: 540px;
   }
+  .box__three .content__box .tabs__ed--sk .tabs__control {
+    margin-right: 1rem;
+  }
 }
