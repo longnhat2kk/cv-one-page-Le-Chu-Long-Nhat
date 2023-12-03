@@ -37,6 +37,10 @@ a {
   cursor: pointer;
 }
 
+body.dark-mode .header__menu .header__nav--social--network li a::before {
+  background-color: var(--background-color-header-night);
+}
+
 /* button_dark_mode */
 #dark__mode--toggle {
   display: none;
@@ -721,6 +725,9 @@ a {
   text-decoration: none;
   transition: 0.5s ease;
 }
+.header__menu .header__nav--social--network li i {
+  line-height: 0 !important;
+}
 .header__menu .header__nav--social--network li i,
 .header__menu .header__nav--menu li a {
   color: var(--color-text-content-black);
@@ -1000,14 +1007,14 @@ a {
   position: absolute;
   right: -10rem;
   top: 88%;
-  transition: all 4s ease-in-out;
+  transition: all 2s ease-in-out;
   z-index: 9;
 }
 .box__two .img-bg.img-bg2 {
   position: absolute;
   left: -10rem;
   top: 88%;
-  transition: all 4s ease-in-out;
+  transition: all 2s ease-in-out;
   z-index: 9;
 }
 .box__two .img-bg.img-bg3 {
@@ -1026,7 +1033,7 @@ a {
 }
 
 .box__two.active .img-bg1 {
-  right: 1rem;
+  right: 4rem;
 }
 .box__two.active .img-bg2 {
   left: 1rem;
@@ -1654,6 +1661,7 @@ a {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
+  gap: 2rem;
 }
 .notification__appears .notification__heading i {
   font-size: 2rem;
@@ -1672,4 +1680,26 @@ a {
 .notification__appears--bg.active {
   opacity: 1;
   visibility: visible;
+}
+.contact__info {
+  z-index: 99997;
+}
+.back__to__top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 99997;
+  background-color: var(--color-boder-orange);
+  border: none;
+  border-radius: 100%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }

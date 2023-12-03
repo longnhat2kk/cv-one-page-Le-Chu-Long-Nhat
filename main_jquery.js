@@ -320,36 +320,38 @@ $(document).ready(function () {
   });
 });
 
-$(".slider").slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  arrows: true,
-  dots: true,
-  centerMode: true,
-  variableWidth: true,
-  infinite: true,
-  focusOnSelect: true,
-  cssEase: "linear",
-  touchMove: true,
-  prevArrow: '<button class="slick-prev"> < </button>',
-  nextArrow: '<button class="slick-next"> > </button>',
+$(document).ready(function () {
+  $(".slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    centerMode: true,
+    variableWidth: true,
+    infinite: true,
+    focusOnSelect: true,
+    cssEase: "linear",
+    touchMove: true,
+    prevArrow: '<button class="slick-prev"> < </button>',
+    nextArrow: '<button class="slick-next"> > </button>',
 
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 3,
+        },
       },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        slidesToShow: 3,
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          slidesToShow: 3,
+        },
       },
-    },
-  ],
+    ],
+  });
 });
 
 var imgs = $(".slider img");
@@ -463,6 +465,23 @@ function eraseText() {
   }, 100);
 }
 
+// Back to top
 $(document).ready(() => {
   typeText();
+});
+
+$(document).ready(function () {
+  // Show or hide the back-to-top button based on scroll position
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $("#back-to-top").fadeIn();
+    } else {
+      $("#back-to-top").fadeOut();
+    }
+  });
+
+  // Scroll to top when the button is clicked
+  $("#back-to-top").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 800);
+  });
 });

@@ -148,6 +148,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--background-color-header-light);
+    z-index: 9999;
     backdrop-filter: blur(10px);
   }
   .menu__mobile h1 {
@@ -353,20 +354,20 @@
     font-size: 1.5rem;
   }
   .modal__email .btn__open--email {
-    top: 70%;
+    top: 71%;
     right: 0.5rem;
   }
   .fb__message {
     right: 0.5rem;
-    top: 76%;
+    top: 78%;
   }
   .phone__number {
     right: 0.5rem;
-    top: 82%;
+    top: 85%;
   }
   .zalo__box {
     right: 0.5rem;
-    top: 88%;
+    top: 92%;
   }
   .zalo__box .zalo__modal {
     right: 100%;
@@ -451,5 +452,15 @@
   }
   .box__three .content__box .tabs__ed--sk .tabs__control {
     margin-right: 1rem;
+  }
+  .box__three .box__content {
+    margin-left: 1.5rem;
+  }
+  .back__to__top {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 40px;
+    height: 40px;
+    left: 0.5rem;
   }
 }
